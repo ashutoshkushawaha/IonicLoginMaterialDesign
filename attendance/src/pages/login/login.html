@@ -13,13 +13,13 @@
 </ion-header>
 
 
-<ion-content class="no-scroll">
-    <mat-card class="example-card">
+<ion-content class="no-scroll" style="background: rgb(73, 130, 153)">
+    <mat-card class="example-card"  style="background:burlywood ">
         <mat-card-header>
           <mat-card-title>Login</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <form class="example-form">
+          <form #loginForm="ngForm" class="example-form">
             <table class="example-full-width" cellspacing="0">
               <tr>
                 <td>
@@ -37,7 +37,9 @@
           <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button (click)="login()" color="primary" >Login</button>
+          <button mat-raised-button (click)="login()" color="primary"   >Login</button>
+
+          <!-- <button mat-raised-button (click)="login()" color="primary"   [disabled]="loginForm.form.invalid">Login</button> -->
         </mat-card-actions>
       </mat-card>
 </ion-content>
